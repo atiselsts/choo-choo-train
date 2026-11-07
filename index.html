@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="lv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#8fd3f4">
+  <title>Tū-tū vilciens</title>
+  <link rel="stylesheet" href="src/fonts.css">
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <div id="defs"></div>
+  <div id="scene"></div>
+
+  <main id="app">
+    <header id="hud">
+      <div id="station">
+        <span id="station-name"></span>
+        <span id="lamps" aria-hidden="true"></span>
+      </div>
+      <div id="score"></div>
+      <div id="buttons">
+        <button id="btn-hint" class="round" type="button"></button>
+        <button id="btn-sound" class="round" type="button"></button>
+        <button id="btn-menu" class="round" type="button"></button>
+      </div>
+    </header>
+
+    <section id="board" aria-live="polite">
+      <p id="prompt"></p>
+      <ul id="clues"></ul>
+      <p id="hint"></p>
+    </section>
+
+    <div id="gap"></div>
+    <section id="platform"></section>
+    <section id="tracks"></section>
+  </main>
+
+  <canvas id="smoke" aria-hidden="true"></canvas>
+  <div id="banner" role="status"></div>
+
+  <div id="title">
+    <div class="title-card">
+      <h1 id="title-text"></h1>
+      <p id="tagline"></p>
+      <button id="btn-play" type="button"></button>
+      <div class="lang-switch" id="title-lang"></div>
+    </div>
+  </div>
+
+  <dialog id="menu">
+    <h2 id="menu-title"></h2>
+    <div class="row"><span id="menu-lang-label"></span><div class="lang-switch" id="menu-lang"></div></div>
+    <div class="row"><span id="menu-sound-label"></span><button id="menu-sound" class="chip" type="button"></button></div>
+    <div class="row"><span id="menu-diff-label"></span><div class="chips" id="menu-diff"></div></div>
+    <div class="menu-actions">
+      <button id="menu-restart" class="chip" type="button"></button>
+      <button id="menu-close" class="chip primary" type="button"></button>
+    </div>
+  </dialog>
+
+  <!-- Classic scripts rather than ES modules: modules do not load from file:// URLs. -->
+  <script src="src/puzzles.js"></script>
+  <script src="src/i18n.js"></script>
+  <script src="src/art.js"></script>
+  <script src="src/audio.js"></script>
+  <script src="src/game.js"></script>
+</body>
+</html>
