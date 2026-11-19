@@ -4,6 +4,8 @@ Browser logic puzzles for ages 6-9, plus a Very hard tier for adults. Load the r
 the carriages and the train leaves with a whistle, chuffing and smoke. Latvian by default, with
 an English switch.
 
+![Choo-choo train: a passenger logic puzzle](screenshot.png)
+
 ## Run
 
 Open `index.html` in a browser. No server, build step or network is needed: the font is
